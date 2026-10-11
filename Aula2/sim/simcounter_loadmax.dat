@@ -1,0 +1,7 @@
+../src/verilog/fadder.v
+../src/verilog/four_bit_adder.v
+../src/verilog/ffd.v
+../src/verilog/register8b.v
+../src/verilog/mux8b.v
+../src/verilog/updowncounter8b_loadmax.v
+../src/verilog/updowncounter_loadmax_tb.v

@@ -19,13 +19,13 @@ module updowncounter8b(
 // INternal 8-bit register:
 reg [7:0] counter;		
 	  
-// The comparator with max_count for counting up:
+// The comparator with max_count for counting up (9-bit so 8-bit wrap is not missed):
 wire   greater_than_max;
-assign greater_than_max = ( counter + step_count ) > max_count;
+assign greater_than_max = ( {1'b0, counter} + step_count ) > {1'b0, max_count};
 
-// The comparator with zero, for counting down:
+// Unsigned underflow when counting down:
 wire   less_than_zero;
-assign less_than_zero = ( counter - step_count ) >= max_count;
+assign less_than_zero = ( counter < step_count );
 			  
 
 always @(posedge clock or posedge reset)
