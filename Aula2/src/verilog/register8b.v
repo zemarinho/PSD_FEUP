@@ -3,11 +3,11 @@
 Structural model of a 8-bit register
 */
 
-module register8b( input  [7:0] d,       // D input
-                   input        clock,   // clock
-			       input        reset,   // reset, synchronous with te clock
-				   input        enable,
-			       output [7:0] q       // Q output
+module register8b(  input  [7:0] d,     // D input
+                    input        clock, // clock
+			     input        reset, // reset, synchronous with te clock
+				input        enable,
+			     output [7:0] q      // Q output
 			  );
 
 // instantiate 8 D-type flip-flops:
@@ -20,4 +20,4 @@ ffd  dff0(.d( d[0] ), .clock( clock ), .reset( reset ), .enable( enable ), .q( q
      dff6(.d( d[6] ), .clock( clock ), .reset( reset ), .enable( enable ), .q( q[6] ) ),
      dff7(.d( d[7] ), .clock( clock ), .reset( reset ), .enable( enable ), .q( q[7] ) );
 
-endmodule			  
+endmodule
