@@ -9,7 +9,7 @@ module ffd(    input d,       // D input
 			   input enable,  // enable, active high
 			   output reg q   // Q output
 			  );
-			  
+
 always @(posedge clock)
 begin
   if ( reset )
@@ -19,4 +19,4 @@ begin
       q <= d;    // q is loaded with d, otherwise q keeps the current value
 end
 
-endmodule			  
+endmodule

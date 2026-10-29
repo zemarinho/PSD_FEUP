@@ -11,7 +11,7 @@ Lab exercise 2 - Design and verification of a sequential non-restoring divider
 	jca@fe.up.pt, 2017 - 2025
 
 */
-`timescale 1ns / 1ns;
+`timescale 1ns / 1ns
 
 module psddivide_tb;
 
